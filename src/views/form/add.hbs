@@ -1,0 +1,65 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+
+            <div class="card">
+                <div class="card-body">
+                    <form action="/form/add" method="POST">
+                    <h3>Request for help</h3>
+                    <h5>Language</h5>
+                    <button class="btn btn-success btn-block">
+                                English
+                            </button>
+                        <div class="form-group">
+                            <h6>Where are you at?</h6>
+                            <input type="text" name="place" class="form-control" placeholder="Place" autofocus>
+                            
+                        </div>
+                        <div class="form-group">
+                            <h6>What is your emergency?</h6>
+                            <input type="checkbox" id="emergency" name="fire" value="Fire">
+                            <label for="emergency">Fire</label>
+                            <input type="checkbox" id="emergency" name="medic" value="Medic">
+                            <label for="emergency">Medic</label><br><br>
+                            <input type="checkbox" id="emergency" name="violence" value="Violence">
+                            <label for="emergency">Violence</label>
+                            <input type="checkbox" id="emergency" name="building" value="Building">
+                            <label for="emergency">Building</label><br><br>
+                            <input type="checkbox" id="emergency" name="flood" value="Flood">
+                            <label for="emergency">Flood</label>
+                            <input type="checkbox" id="emergency" name="trapped" value="Trapped">
+                            <label for="emergency">Trapped</label><br><br>
+                            <input type="text" name="other" class="form-control" placeholder="Other" autofocus>
+                        </div>
+                        <div class="form-group">
+                        <h6>What do you need?</h6>
+                            <input type="checkbox" id="emergency" name="evacuation" value="Evacuation">
+                            <label for="emergency">Evacuation</label>
+                            <input type="checkbox" id="emergency" name="food" value="Food">
+                            <label for="emergency">Food</label><br><br>
+                            <input type="checkbox" id="emergency" name="clothes" value="Clothes">
+                            <label for="emergency">Clothes</label>
+                            <input type="checkbox" id="emergency" name="refuge" value="Refuge">
+                            <label for="emergency">Refuge</label><br><br>
+                            <input type="checkbox" id="emergency" name="firstaid" value="Firstaid">
+                            <label for="emergency">First aid</label>
+                            <input type="checkbox" id="emergency" name="water" value="Water">
+                            <label for="emergency">Water</label><br><br>
+                            <input type="text" name="other" class="form-control" placeholder="Other" autofocus>    
+                        </div>
+                        <div class="form-group">
+                            <h6>Message:</h6>
+                            <textarea type="text" name="message" rows="2" class="form-control" placeholder="Message"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-success btn-block">
+                                Send
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
