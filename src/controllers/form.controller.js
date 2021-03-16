@@ -1,52 +1,62 @@
-const formsCtrl = {};
-
 const pool = require('../database');
+const formsCtrl = {};
 
 formsCtrl.renderAddForm = (req, res) => {
 	res.render('form/add');
 };
 
 formsCtrl.addForm = async (req, res) => {
-	const { fullname, username, password } = req.body;
+	let { place, emergency, need, message } = req.body;
+	const node = 1;
+	if (emergency != undefined && need != undefined) {
+		emergency = emergency.toString();
+		need = need.toString();
+	}
 	const newForm = {
-		fullname,
-		username,
-		password,
+		place,
+		emergency,
+		need,
+		message,
+		node,
 	};
 	await pool.query('INSERT INTO history set ?', newForm);
-	req.flash('success', 'Form Saved Successfully');
-	res.redirect('/form');
+	res.redirect('/form/sent');
 };
 
-// formsCtrl.renderForms = async (req, res) => {
-// 	const form = await pool.query('SELECT * FROM users', [req.user.id]);
-// 	res.render('form/list', { form });
-// };
+formsCtrl.renderForm = async (req, res) => {
+	res.render('form/sent');
+};
 
-// formsCtrl.deleteForm = async (req, res) => {
-// 	const { id } = req.params;
-// 	await pool.query('DELETE FROM users WHERE id = ?', [id]);
-// 	req.flash('success', 'Form Removed Successfully');
-// 	res.redirect('/form');
-// };
+formsCtrl.renderSentForm = async (req, res) => {
+	const sentForm = await pool.query('SELECT * FROM history');
+	res.render('form/sent', { sentForm });
+};
 
-// formsCtrl.renderEditForm = async (req, res) => {
-// 	const { id } = req.params;
-// 	const form = await pool.query('SELECT * FROM users WHERE id = ?', [id]);
-// 	console.log(form);
-// 	res.render('form/edit', { form: form[0] });
-// };
+formsCtrl.renderEditForm = async (req, res) => {
+	const { id } = req.params;
+	const sentForm = await pool.query('SELECT * FROM history WHERE id = ?', [
+		id,
+	]);
+	console.log(sentForm);
+	res.render('form/edit', { sentForm: sentForm[0] });
+};
 
-// formsCtrl.editForm = async (req, res) => {
-// 	const { id } = req.params;
-// 	const { fullname, username } = req.body;
-// 	const newForm = {
-// 		fullname,
-// 		username,
-// 	};
-// 	await pool.query('UPDATE users set ? WHERE id = ?', [newForm, id]);
-// 	req.flash('success', 'Form Updated Successfully');
-// 	res.redirect('/form');
-// };
+formsCtrl.editForm = async (req, res) => {
+	let { place, emergency, need, message } = req.body;
+	const node = 1;
+	if (emergency != undefined && need != undefined) {
+		emergency = emergency.toString();
+		need = need.toString();
+	}
+	const newForm = {
+		place,
+		emergency,
+		need,
+		message,
+		node,
+	};
+	await pool.query('UPDATE history set ? WHERE id = ?', [newForm, id]);
+	res.redirect('/form/sent');
+};
 
 module.exports = formsCtrl;

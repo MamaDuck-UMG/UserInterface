@@ -1,15 +1,22 @@
-<main class="index">
-    <header class="masthead d-flex">
-        <div class="container text-center my-auto">
-            <h1 class="mb-1">MAMA DUCK</h1>
-            <h3 class="mb-5">
-                <em>Connect to network</em>
-            </h3>
-            <button class="btn btn-primary btn-lg" >
-            <a href="/form/add">Connect</a>
-                
-            </button>
+<div class="container p-9">
+    <div class="row">
+        <div class="col-md-5 mx-auto">
+            <div class="card">
+                <div class="card-body">
+                    <h2>Language</h2>
+                    <button class="btn-lang" ><h4>English</h4></button>
+                    <form action="/form/add" method="POST">
+                        <h2>Location:</h2>
+                        <p class="cords">{#NODE}</p>
+                        <button class="btn-send"><h4>SEND</h4></button>
+                    </form>
+                    <button class="btn-det">
+                        <a class="btn-det" href="/form/add"> 
+                            Add details before send
+                        </a>
+                    </button>
+                </div>
+            </div>
         </div>
-        <div class="overlay"></div>
-    </header>
-</main>
+    </div>
+</div>
