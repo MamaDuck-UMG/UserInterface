@@ -5,7 +5,6 @@ const {
 	renderAddForm,
 	addForm,
 	renderForm,
-	renderSentForm,
 	renderEditForm,
 	editForm,
 } = require('../controllers/form.controller');
@@ -13,8 +12,7 @@ const {
 router.get('/add', renderAddForm);
 router.post('/add', addForm);
 router.get('/', renderForm);
-router.get('/sent', renderSentForm);
-router.get('/edit/:id', renderEditForm);
-router.post('/edit/:id', editForm);
+router.get('/edit/:cookies', renderEditForm);
+router.post('/edit/:cookies', editForm);
 
 module.exports = router;

@@ -1,11 +1,13 @@
 <div class="container p-9">
     <div class="row">
+        {{#each sentForm}}
         <div class="col-md-5 mx-auto">
             <div class="card">
                 <div class="card-body">
                     <form>
                         <div class="message-form">
                             <h3>Message sent</h3>
+                            <h4>Message ID: {{cookies}}</h4>
                         </div>
                         <p>If your situation changes, please send an update</p>
                         <a class="btn btn-danger" href="/form/edit/{{id}}">
@@ -16,4 +18,5 @@
             </div>
         </div>
     </div>
+    {{/each}}
 </div>

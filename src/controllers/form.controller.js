@@ -8,6 +8,8 @@ formsCtrl.renderAddForm = (req, res) => {
 formsCtrl.addForm = async (req, res) => {
 	let { place, emergency, need, message } = req.body;
 	const node = 1;
+	const cookies = req.cookies.cookieName;
+	console.log(cookies);
 	if (emergency != undefined && need != undefined) {
 		emergency = emergency.toString();
 		need = need.toString();
@@ -18,30 +20,38 @@ formsCtrl.addForm = async (req, res) => {
 		need,
 		message,
 		node,
+		cookies,
 	};
 	await pool.query('INSERT INTO history set ?', newForm);
-	res.redirect('/form/sent');
+	res.redirect('/form');
 };
 
 formsCtrl.renderForm = async (req, res) => {
-	res.render('form/sent');
-};
-
-formsCtrl.renderSentForm = async (req, res) => {
-	const sentForm = await pool.query('SELECT * FROM history');
+	const cookies = req.cookies.cookieName;
+	const sentForm = await pool.query(
+		'SELECT * FROM history WHERE cookies = ?',
+		[cookies]
+	);
+	console.log(cookies);
+	console.log(sentForm);
 	res.render('form/sent', { sentForm });
 };
 
 formsCtrl.renderEditForm = async (req, res) => {
-	const { id } = req.params;
-	const sentForm = await pool.query('SELECT * FROM history WHERE id = ?', [
-		id,
-	]);
+	const cookies = req.cookies.cookieName;
+	const sentForm = await pool.query(
+		'SELECT * FROM history WHERE cookies = ?',
+		[cookies]
+	);
 	console.log(sentForm);
 	res.render('form/edit', { sentForm: sentForm[0] });
 };
 
 formsCtrl.editForm = async (req, res) => {
+	const cookies = req.cookies.cookieName;
+	const cookie = await pool.query('SELECT * FROM history WHERE cookies = ?', [
+		cookies,
+	]);
 	let { place, emergency, need, message } = req.body;
 	const node = 1;
 	if (emergency != undefined && need != undefined) {
@@ -55,8 +65,11 @@ formsCtrl.editForm = async (req, res) => {
 		message,
 		node,
 	};
-	await pool.query('UPDATE history set ? WHERE id = ?', [newForm, id]);
-	res.redirect('/form/sent');
+	await pool.query('UPDATE history set ? WHERE cookies = ?', [
+		newForm,
+		cookies,
+	]);
+	res.redirect('/form');
 };
 
 module.exports = formsCtrl;

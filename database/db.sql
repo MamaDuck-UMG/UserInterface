@@ -4,9 +4,7 @@ CREATE TABLE history (
   place VARCHAR(100) NULL,
   emergency VARCHAR(100) NULL,
   need VARCHAR(100) NULL,
-  message VARCHAR(200) NULL,
+  message VARCHAR(100) NULL,
   node INT(11) NOT NULL
+  cookies VARCHAR(100) NOT NULL
 );
-
-ALTER TABLE history
-  MODIFY place TEXT;

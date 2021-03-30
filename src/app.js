@@ -3,11 +3,12 @@ const morgan = require('morgan');
 const path = require('path');
 const exphbs = require('express-handlebars');
 const bodyParser = require('body-parser');
-
+const cookieParser = require('cookie-parser');
 const { port } = require('./config');
 
 // Intializations
 const app = express();
+require('./lib/cookies');
 
 // Settings
 app.set('port', port);
@@ -28,6 +29,7 @@ app.set('view engine', '.hbs');
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(cookieParser());
 
 // Routes
 app.use(require('./routes/index.routes'));

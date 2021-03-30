@@ -3,7 +3,7 @@
         <div class="col-md-6 mx-auto">
             <div class="card">
                 <div class="card-body">
-                    <form action="/form/add" method="POST">
+                    <form action="/form/edit/{{sentForm.id}}" method="POST">
                     <h3>Request for help</h3>
                     {{!-- <h5>Language</h5>
                     <button class="btn-lang">
@@ -11,7 +11,7 @@
                             </button> --}}
                         <div class="form-group">
                             <h6>Where are you at?</h6>
-                            <input type="text" name="place" class="form-input" placeholder="Place" value="{{formSent.place}}"autofocus>
+                            <input type="text" name="place" class="form-input" placeholder="Place" value="{{sentForm.place}}"autofocus>
                         </div>
                         <div class="form-group">
                             <h6>What is your emergency?</h6>
@@ -65,7 +65,7 @@
                         </div>
                         <div class="form-group">
                             <h6>Message:</h6>
-                            <textarea type="text" name="message" rows="2" class="form-input" placeholder="Message"></textarea>
+                            <textarea type="text" name="message" rows="2" class="form-input" placeholder="Message" >{{sentForm.message}}</textarea>
                         </div>
                         <div class="form-group">
                             <button class="btn btn-success btn-block">
