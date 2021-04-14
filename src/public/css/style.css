@@ -162,14 +162,27 @@ a:hover {
 	cursor: pointer;
 }
 
+.btn-form {
+	width: 120px;
+	height: 90px;
+	border: 0;
+	margin: auto;
+	cursor: pointer;
+}
+
 .cords {
 	width: 60%;
 	margin: auto;
+	margin-bottom: 10px;
 	color: rgb(219, 219, 219);
 	padding-bottom: 2px;
 	background-color: rgb(85, 85, 85);
 	border: 1px solid rgb(85, 85, 85);
 	border-radius: 4px;
+}
+
+.img-btn {
+	margin-bottom: 5px;
 }
 
 li {

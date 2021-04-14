@@ -4,73 +4,22 @@
             <div class="card">
                 <div class="card-body">
                     <form action="/form/edit/{{sentForm.id}}" method="POST">
-                    <h3>Request for help</h3>
-                    {{!-- <h5>Language</h5>
-                    <button class="btn-lang">
-                                English
-                            </button> --}}
+                    <h3>Help is on the way!</h3>
+                    <h5>Additional information</h5>
                         <div class="form-group">
                             <h6>Where are you at?</h6>
-                            <input type="text" name="place" class="form-input" placeholder="Place" value="{{sentForm.place}}"autofocus>
+                            <input type="text" name="place" class="form-input" placeholder="Place" value="{{sentForm.place}}" autofocus>
                         </div>
                         <div class="form-group">
-                            <h6>What is your emergency?</h6>
-                            <table id="table-form">
-                                <tbody>
-                                    <tr>
-                                        <th><input type="checkbox" id="emergency" name="fire" value="Fire">
-                                            <label class="check" for="emergency">Fire</label></th>
-                                        <th><input type="checkbox" id="emergency" name="medic" value="Medic">
-                                            <label class="check" for="emergency">Medic</label></th>                                
-                                    </tr>
-                                    <tr>
-                                        <th><input type="checkbox" id="emergency" name="violence" value="Violence">
-                                            <label class="check" for="emergency">Violence</label></th>
-                                        <th><input type="checkbox" id="emergency" name="building" value="Building">
-                                            <label class="check" for="emergency">Building</label></th>                                    
-                                    </tr>
-                                    <tr>
-                                        <th><input type="checkbox" id="emergency" name="flood" value="Flood">
-                                            <label class="check" for="emergency">Flood</label></th>
-                                        <th><input type="checkbox" id="emergency" name="trapped" value="Trapped">
-                                            <label class="check" for="emergency">Trapped</label></th>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <input type="text" name="emergency" class="form-input" placeholder="Other" autofocus>
-                        </div>
-                        <div class="form-group">
-                        <h6>What do you need?</h6>
-                        <table id="table-form">
-                            <tr>
-                                <th><input type="checkbox" id="need" name="evacuation" value="Evacuation">
-                                    <label class="check" for="need">Evacuation</label></th>
-                                <th><input type="checkbox" id="need" name="food" value="Food">
-                                    <label class="check" for="need">Food</label></th>
-                            </tr>
-                            <tr>
-                                <th><input type="checkbox" id="need" name="clothes" value="Clothes">
-                                    <label class="check" for="need">Clothes</label></th>
-                                <th><input type="checkbox" id="need" name="refuge" value="Refuge">
-                                    <label class="check" for="need">Refuge</label></th>
-                            </tr>
-                            <tr>
-                                <th><input type="checkbox" id="need" name="firstaid" value="Firstaid">
-                                    <label class="check" for="need">First aid</label></th>
-                                <th><input type="checkbox" id="need" name="water" value="Water">
-                                    <label class="check" for="need">Water</label></th>
-                            </tr>
-                        </table>
-                            <input type="text" name="need" class="form-input" placeholder="Other" autofocus>    
+                            <h6>What do you need?</h6>
+                            <input type="text" name="need" class="form-input" placeholder="Need" value="{{sentForm.need}}" autofocus>    
                         </div>
                         <div class="form-group">
                             <h6>Message:</h6>
-                            <textarea type="text" name="message" rows="2" class="form-input" placeholder="Message" >{{sentForm.message}}</textarea>
+                            <textarea type="text" name="message" rows="2" class="form-input" placeholder="Message">{{sentForm.message}}</textarea>
                         </div>
                         <div class="form-group">
-                            <button class="btn btn-success btn-block">
-                                Send
-                            </button>
+                            <input class="btn-submit" type="submit" value="Send">
                         </div>
                     </form>
                 </div>
