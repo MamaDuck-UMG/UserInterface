@@ -6,21 +6,20 @@ formsCtrl.renderAddForm = (req, res) => {
 };
 
 formsCtrl.addForm = async (req, res) => {
-	let { place, emergency, need, message } = req.body;
+	let { emergency } = req.body;
+	status = true;
+	active = status;
 	const node = 1;
 	const cookies = req.cookies.cookieName;
 	console.log(cookies);
-	if (emergency != undefined && need != undefined) {
+	if (emergency != undefined) {
 		emergency = emergency.toString();
-		need = need.toString();
 	}
 	const newForm = {
-		place,
 		emergency,
-		need,
-		message,
 		node,
 		cookies,
+		active,
 	};
 	await pool.query('INSERT INTO history set ?', newForm);
 	res.redirect('/form');
@@ -32,8 +31,6 @@ formsCtrl.renderForm = async (req, res) => {
 		'SELECT * FROM history WHERE cookies = ?',
 		[cookies]
 	);
-	console.log(cookies);
-	console.log(sentForm);
 	res.render('form/sent', { sentForm });
 };
 
@@ -52,15 +49,13 @@ formsCtrl.editForm = async (req, res) => {
 	const cookie = await pool.query('SELECT * FROM history WHERE cookies = ?', [
 		cookies,
 	]);
-	let { place, emergency, need, message } = req.body;
+	let { place, need, message } = req.body;
 	const node = 1;
-	if (emergency != undefined && need != undefined) {
-		emergency = emergency.toString();
+	if (need != undefined) {
 		need = need.toString();
 	}
 	const newForm = {
 		place,
-		emergency,
 		need,
 		message,
 		node,
