@@ -38,4 +38,8 @@ app.use('/form', require('./routes/form.routes'));
 // Public
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(function (req, res) {
+	res.render('404');
+});
+
 module.exports = app;
