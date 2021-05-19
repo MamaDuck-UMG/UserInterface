@@ -263,18 +263,7 @@ tbody {
 
 @media only screen and (min-width: 600px) {
 	/* For tablets: */
-	.cords {width: 8.33%;}
-	.cords{width: 16.66%;}
-	.cords {width: 25%;}
-	.cords {width: 33.33%;}
-	.cords {width: 41.66%;}
-	.cords {width: 50%;}
-	.cords {width: 58.33%;}
-	.cords {width: 66.66%;}
-	.cords {width: 75%;}
-	.cords {width: 83.33%;}
-	.cords {width: 91.66%;}
-	.cords {width: 100%;}
+	
 	.container {width: 8.33%;}
 	.container{width: 16.66%;}
 	.container {width: 25%;}
@@ -303,18 +292,6 @@ tbody {
   }
   @media only screen and (min-width: 768px) {
 	/* For desktop: */
-	.cords {width: 8.33%;}
-	.cords{width: 16.66%;}
-	.cords {width: 25%;}
-	.cords {width: 33.33%;}
-	.cords {width: 41.66%;}
-	.cords {width: 50%;}
-	.cords {width: 58.33%;}
-	.cords {width: 66.66%;}
-	.cords {width: 75%;}
-	.cords {width: 83.33%;}
-	.cords {width: 91.66%;}
-	.cords {width: 100%;}
 	.container {width: 8.33%;}
 	.container{width: 16.66%;}
 	.container {width: 25%;}
