@@ -1,8 +1,11 @@
+ 
+
 * {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
 	font-family: 'Oswald', sans-serif;
+	
 }
 
 html {
@@ -27,8 +30,8 @@ body h1 {
 }
 
 .index {
-	width: 100vw;
-	height: 100vh;
+	width: 1vw;
+	height: 1vh;
 }
 
 .navbar {
@@ -257,3 +260,134 @@ tbody {
 	margin: 56px 0 24px;
 	font-size: 16px;
 }
+
+@media only screen and (min-width: 600px) {
+	/* For tablets: */
+	.cords {width: 8.33%;}
+	.cords{width: 16.66%;}
+	.cords {width: 25%;}
+	.cords {width: 33.33%;}
+	.cords {width: 41.66%;}
+	.cords {width: 50%;}
+	.cords {width: 58.33%;}
+	.cords {width: 66.66%;}
+	.cords {width: 75%;}
+	.cords {width: 83.33%;}
+	.cords {width: 91.66%;}
+	.cords {width: 100%;}
+	.container {width: 8.33%;}
+	.container{width: 16.66%;}
+	.container {width: 25%;}
+	.container {width: 33.33%;}
+	.container {width: 41.66%;}
+	.container {width: 50%;}
+	.container {width: 58.33%;}
+	.container {width: 66.66%;}
+	.container {width: 75%;}
+	.container {width: 83.33%;}
+	.container {width: 91.66%;}
+	.container {width: 100%;}
+	.form-input{width: 8.33%;}
+	.form-input{width: 16.66%;}
+	.form-input {width: 25%;}
+	.form-input {width: 33.33%;}
+	.form-input {width: 41.66%;}
+	.form-input {width: 50%;}
+	.form-input {width: 58.33%;}
+	.form-input {width: 66.66%;}
+	.form-input {width: 75%;}
+	.form-input {width: 83.33%;}
+	.form-input {width: 91.66%;}
+	.form-input {width: 100%;}
+	.masthead {width: 8.33%;}
+	.masthead{width: 16.66%;}
+	.masthead {width: 25%;}
+	.masthead {width: 33.33%;}
+	.masthead {width: 41.66%;}
+	.masthead {width: 50%;}
+	.masthead {width: 58.33%;}
+	.masthead {width: 66.66%;}
+	.masthead {width: 75%;}
+	.masthead {width: 83.33%;}
+	.masthead {width: 91.66%;}
+	.masthead {width: 100%;}
+	
+  }
+  @media only screen and (min-width: 768px) {
+	/* For desktop: */
+	.cords {width: 8.33%;}
+	.cords{width: 16.66%;}
+	.cords {width: 25%;}
+	.cords {width: 33.33%;}
+	.cords {width: 41.66%;}
+	.cords {width: 50%;}
+	.cords {width: 58.33%;}
+	.cords {width: 66.66%;}
+	.cords {width: 75%;}
+	.cords {width: 83.33%;}
+	.cords {width: 91.66%;}
+	.cords {width: 100%;}
+	.container {width: 8.33%;}
+	.container{width: 16.66%;}
+	.container {width: 25%;}
+	.container {width: 33.33%;}
+	.container {width: 41.66%;}
+	.container {width: 50%;}
+	.container {width: 58.33%;}
+	.container {width: 66.66%;}
+	.container {width: 75%;}
+	.container {width: 83.33%;}
+	.container {width: 91.66%;}
+	.container {width: 100%;}
+	.form-input{width: 8.33%;}
+	.form-input{width: 16.66%;}
+	.form-input {width: 25%;}
+	.form-input {width: 33.33%;}
+	.form-input {width: 41.66%;}
+	.form-input {width: 50%;}
+	.form-input {width: 58.33%;}
+	.form-input {width: 66.66%;}
+	.form-input {width: 75%;}
+	.form-input {width: 83.33%;}
+	.form-input {width: 91.66%;}
+	.form-input {width: 100%;}
+	.btn-det {width: 8.33%;}
+	.btn-det{width: 16.66%;}
+	.btn-det {width: 25%;}
+	.btn-det {width: 33.33%;}
+	.btn-det {width: 41.66%;}
+	.btn-det {width: 50%;}
+	.btn-det {width: 58.33%;}
+	.btn-det {width: 66.66%;}
+	.btn-det {width: 75%;}
+	.btn-det {width: 83.33%;}
+	.btn-det {width: 91.66%;}
+	.btn-det {width: 100%;}
+	.masthead {width: 8.33%;}
+	.masthead{width: 16.66%;}
+	.masthead {width: 25%;}
+	.masthead {width: 33.33%;}
+	.masthead {width: 41.66%;}
+	.masthead {width: 50%;}
+	.masthead {width: 58.33%;}
+	.masthead {width: 66.66%;}
+	.masthead {width: 75%;}
+	.masthead {width: 83.33%;}
+	.masthead {width: 91.66%;}
+	.masthead {width: 100%;}
+	.card {width: 8.33%;}
+	.card{width: 16.66%;}
+	.card {width: 25%;}
+	.card {width: 33.33%;}
+	.card {width: 41.66%;}
+	.card {width: 50%;}
+	.card {width: 58.33%;}
+	.card {width: 66.66%;}
+	.card {width: 75%;}
+	.card {width: 83.33%;}
+	.card {width: 91.66%;}
+	.card {width: 100%;}
+	
+	
+  }
+ 
